@@ -61,5 +61,4 @@ function capturarEnter(event) {
 //pega o botão calcular pelo id e adiciona um ouvinte de evento que, quando o mesmo é pressionado/clicado, o resultado é exibido através do função indicado
 document.getElementById("calcular").addEventListener("click", exibirResultado);
 
-document.getElementById("calcular").addEventListener("click, exibirResultado");
 document.querySelector("form").addEventListener("keypress", capturarEnter);
