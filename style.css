@@ -126,6 +126,14 @@ footer span {
   font-size: 0.8rem;
 }
 
+.azul {
+    color: green;
+}
+
+.vermelho {
+    color: red;
+}
+
 @media (max-width: 768px) {
   .categorias {
     display: none;

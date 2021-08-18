@@ -10,7 +10,7 @@ function classificar(imc) {
   if (imc < 18.5) {
     classificao = " abaixo do peso.";
   } else if (imc < 25) {
-    classificao = " com o peso ideal. Parabéns!";
+    classificao = " com o peso ideal. <span class="verde">Parabéns!</span>"
   } else if (imc < 30) {
     classificao = " levemente acima do peso.";
   } else if (imc < 35) {
@@ -18,12 +18,13 @@ function classificar(imc) {
   } else if (imc < 40) {
     classificao = " com obesidade grau II.";
   } else {
-    classificao = " com obesidade grau III. Cuidado!";
+    classificao = " com obesidade grau III. <span class="vermelho">Cuidado!</span>"
   }
 
   return classificao;
 }
 
+// função que valida se os campos do formulário estão preenchidos de acordo com o que está no html
 function camposValidos() {
   return document.querySelector("form").reportValidity();
 }
@@ -43,7 +44,7 @@ function exibirResultado() {
     const classificacao = classificar(imc);
 
     //exibe uma mensagem na caixa de texto "resultado" após o botão ser pressionado
-    resultado.textContent = `${nome} seu IMC é ${imc
+    resultado.innerHTML.textContent = `${nome} seu IMC é ${imc
       .toString()
       .replace(".", ",")} e você está ${classificacao}`;
   } else {
